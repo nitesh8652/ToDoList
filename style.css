@@ -79,7 +79,7 @@ body {
 
 .inputtxt:hover{
     background: transparent;
-    transition: 400ms;
+    transition: 100ms;
 }
 
 
@@ -141,10 +141,40 @@ body {
     list-style: none;
     font-family: "Poppins", serif;
     font-size: 18px;
+    margin-left: 50px;
+    display: flex;
+   
+    justify-content: center;
+    flex-direction: column;
 }
 
 .tasks li{
-    padding: 5px;
-    user-select: none;
+    padding: 15px;
+    /* user-select: none; */
     cursor: pointer;
+    position: relative;
+    top: 12px;
+}
+
+.tasks li::before{
+content: "";
+height: 25px;
+width: 25px;
+background-image: url(images/unchecked.png);
+position: absolute;
+background-size: cover;
+background-position: center;
+top: 16px;
+left: -30px;
+}
+
+.selected{
+    color: #777777;
+    text-decoration: line-through;
+    
+}
+
+.selected::before {
+    background-image: url(images/done.svg);
+
 }
