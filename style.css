@@ -143,14 +143,12 @@ body {
     font-size: 18px;
     margin-left: 50px;
     display: flex;
-   
     justify-content: center;
     flex-direction: column;
 }
 
 .tasks li{
     padding: 15px;
-    /* user-select: none; */
     cursor: pointer;
     position: relative;
     top: 12px;
@@ -160,7 +158,7 @@ body {
 content: "";
 height: 25px;
 width: 25px;
-background-image: url(images/unchecked.png);
+background-image: url(images/circle.png);
 position: absolute;
 background-size: cover;
 background-position: center;
@@ -174,7 +172,13 @@ left: -30px;
     
 }
 
-.selected::before {
-    background-image: url(images/done.svg);
+li.selected::before {
+    background-image: url(images/tick1.svg);
+    height: 30px;
+    width: 30px;
 
+}
+
+.hehe{
+    background-color: purple;
 }
