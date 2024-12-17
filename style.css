@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     padding: 0;
@@ -66,7 +67,7 @@ body {
     border: none;
     border-radius: 7px;
     background: #1E0E00;
-    border:3px solid #1E0E00;
+    border: 3px solid #1E0E00;
     outline: 0;
     color: #1E0E00;
     padding: 2px;
@@ -77,7 +78,7 @@ body {
 
 }
 
-.inputtxt:hover{
+.inputtxt:hover {
     background: transparent;
     transition: 100ms;
 }
@@ -115,6 +116,7 @@ body {
     box-shadow: 0 0 7px #1E0E00;
     background-color: transparent;
 }
+
 .button:active {
     box-shadow: 0 0 30px #1E0E00;
     background-color: transparent;
@@ -133,11 +135,11 @@ body {
     height: 19px;
 }
 
-.add{
+.add {
     fill: rgb(255, 255, 255);
 }
 
-.tasks{
+.tasks {
     list-style: none;
     font-family: "Poppins", serif;
     font-size: 18px;
@@ -147,38 +149,114 @@ body {
     flex-direction: column;
 }
 
-.tasks li{
+.tasks li {
     padding: 15px;
     cursor: pointer;
     position: relative;
     top: 12px;
 }
 
-.tasks li::before{
-content: "";
-height: 25px;
-width: 25px;
-background-image: url(images/circle.png);
-position: absolute;
-background-size: cover;
-background-position: center;
-top: 16px;
-left: -30px;
+.tasks li::before {
+    content: "";
+    height: 25px;
+    width: 25px;
+    background-image: url(images/circle.png);
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    top: 16px;
+    left: -30px;
 }
 
-.selected{
+.selected {
     color: #777777;
     text-decoration: line-through;
-    
+
 }
 
 li.selected::before {
     background-image: url(images/tick1.svg);
     height: 30px;
     width: 30px;
+    
 
 }
 
-.hehe{
+.hehe {
     background-color: purple;
+}
+
+.empty {
+    border-radius: 7px;
+    height: 307px;
+    width: 505px;
+    background-color: aqua;
+    position: absolute;
+    z-index: 99;
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+    display: none;
+}
+
+.empty h3 {
+    font-size: 35px;
+    position: relative;
+    top: 30%;
+}
+
+.empty button {
+    border: 0;
+    border-radius: 7px;
+    position: relative;
+    top: 30%;
+    height: 42px;
+    width: 89px;
+}
+
+.btn-paper {
+    align-self: center;
+    background-color:
+        #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow:
+        rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color:
+        #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.btn-paper:hover {
+    box-shadow:
+        rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+}
+.btn-paper:focus {
+    box-shadow:
+        rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+.btn-paper:active {
+    background-color: #1E0E00;
+    color: #fff;
 }
