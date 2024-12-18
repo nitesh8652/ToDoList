@@ -147,6 +147,8 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+   
+    width: 92%;
 }
 
 .tasks li {
@@ -154,6 +156,7 @@ body {
     cursor: pointer;
     position: relative;
     top: 12px;
+    width: 94%
 }
 
 .tasks li::before {
@@ -164,7 +167,7 @@ body {
     position: absolute;
     background-size: cover;
     background-position: center;
-    top: 16px;
+    top: 18px;
     left: -30px;
 }
 
@@ -178,13 +181,9 @@ li.selected::before {
     background-image: url(images/tick1.svg);
     height: 30px;
     width: 30px;
-    
-
 }
 
-.hehe {
-    background-color: purple;
-}
+
 
 .empty {
     border-radius: 7px;
@@ -212,6 +211,15 @@ li.selected::before {
     height: 42px;
     width: 89px;
 }
+
+/* .cross{
+    position: relative;
+    height: 21px;
+    width: 21px;
+    left: 74%;
+} */
+
+
 
 .btn-paper {
     align-self: center;
@@ -246,11 +254,13 @@ li.selected::before {
     -webkit-user-select: none;
     touch-action: manipulation;
 }
+
 .btn-paper:hover {
     box-shadow:
         rgba(0, 0, 0, .3) 2px 8px 8px -5px;
     transform: translate3d(0, 2px, 0);
 }
+
 .btn-paper:focus {
     box-shadow:
         rgba(0, 0, 0, .3) 2px 8px 4px -6px;
@@ -259,4 +269,20 @@ li.selected::before {
 .btn-paper:active {
     background-color: #1E0E00;
     color: #fff;
+}
+
+.tasks li span{
+    color: #1e0e00c9;
+    font-weight: 500;
+    font-size: 19px;
+    position: absolute;
+    left: 83%;
+    overflow: hidden;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.tasks li span:hover{
+    color: #1e0e00;
+    transform: scale(1.5);
+  
 }
