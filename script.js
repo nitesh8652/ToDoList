@@ -89,14 +89,57 @@ imgclose.addEventListener("click", () => {
     imgchange.src = ""; // Clear the image
     localStorage.removeItem("imageData"); // Remove image data from localStorage
     savedata(); // Save the updated state
-});
+}); 
 
 
 loadImage(); // Load the image when the page loads
 showdata(); // Load the saved tasks when the page loads
 
+let unhide = document.querySelector(".unhide");
+let containerclose = document.querySelector(".containerclose");
+let threedots = document.querySelector(".threedots");
+// let overlay = document.querySelector(".overlay");
+let dummyimg = document.querySelector(".dummyimg");
 
 
 
 
+containerclose.addEventListener("click",()=>{
+    unhide.style.display="none";
+    tasks.style.pointerEvents = "auto"
+})
 
+threedots.addEventListener("click",()=>{
+    unhide.style.display="block";
+})
+
+
+imgchange.addEventListener("click", (e) => {
+   
+   
+    if (e.target.tagName === "IMG") {
+        let overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+
+        // Add the full-size image to the overlay
+        let fullScreenImg = document.createElement("img");
+        fullScreenImg.src = e.target.src; // Use the clicked image's source
+        overlay.appendChild(fullScreenImg);
+
+        // Append overlay to the body
+        document.body.appendChild(overlay);
+
+        // Add a click event to remove the overlay
+        overlay.addEventListener("click", () => {
+            document.body.removeChild(overlay);
+        });
+
+        console.log("Overlay created and displayed");
+    }
+    console.log("Image clicked");
+});
+
+threedots.addEventListener("click", () => {
+    unhide.style.display = "block";
+    tasks.style.pointerEvents = "none"; // Disable task clicks
+});

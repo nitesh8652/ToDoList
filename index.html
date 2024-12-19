@@ -8,11 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
 <body>
+    <!-- <div class="overlay"></div> -->
     <div class="card">
         <div class="tittle">
             <div class="titletxt">TO-DO-LIST</div>
             <img src="images/tittle.svg" alt="" class="tittleimg">
+            <div class="threedots">
+                <img src="images/threedots.png" alt="menu">
+            </div>
         </div>
 
         <div class="section">
@@ -29,18 +38,29 @@
                     </svg>
                     <p class="text">Add</p>
                 </button>
-                <div class="upload">
-                    <input type="file" class="imgfile" accept="image/*">
-                    <div class="dummyimg">
-                        <h7>Image Limit 3mb!</h7>
-                        <div class="closecontainer">
-                            <img src="images/close.png" alt="" class="imgclose">
+
+                <div class="unhide ">
+                    <div class="hide">
+                        <div class="upload">
+                            <div class="controls">
+                                <input type="file" class="imgfile" accept="image/*">
+                                <img src="images/imgcontainer.png" alt="close" class="containerclose">
+                            </div>
+                            <div class="dummyimg">
+                                <h7>Image Limit Is 3mb!</h7>
+                                <div class="closecontainer">
+                                    <img src="images/closeimg.png" alt="" class="imgclose">
+                                </div>
+                                <img src="" alt="Add Image Here" class="imgchange">
+                            </div>
                         </div>
-                        <img src="" alt="Add Image Here" class="imgchange">
                     </div>
                 </div>
             </div>
+        </div>
 
+
+        <div class="scroll">
             <div class="tasks">
                 <!-- <li class="selected"></li> -->
                 <!-- <div class="hehe">
@@ -53,8 +73,9 @@
                 <li>Task 5</li> -->
             </div>
 
-
         </div>
+    </div>
+    </div>
 
     </div>
     <script src="script.js"></script>
