@@ -141,5 +141,32 @@ imgchange.addEventListener("click", (e) => {
 
 threedots.addEventListener("click", () => {
     unhide.style.display = "block";
-    tasks.style.pointerEvents = "none"; // Disable task clicks
+    tasks.style.pointerEvents = "none"; 
 });
+
+let reset = document.querySelector(".reset");
+
+function removedata(){
+    localStorage.clear();
+    tasks.innerHTML="";
+    imgchange.src="";
+
+}
+
+reset.addEventListener("click",()=>{
+    alert("It Will Erase All Data Including Image") 
+    removedata();
+    console.log("clickesssd")
+})
+
+let aboutme = document.querySelector(".aboutme");
+let about = document.querySelector(".about");
+let close = document.querySelector(".close");
+
+aboutme.addEventListener("click",()=>{
+about.style.display="block";
+})
+
+close.addEventListener("click",()=>{
+    about.style.display="none";
+})
